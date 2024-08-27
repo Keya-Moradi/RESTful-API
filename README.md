@@ -13,3 +13,11 @@ Concepts of RESTful routing and exposing API endpoints using Postman
 | DELETE             | `/amazonListings/:listingId`      | Delete a specific _amazonListing_  | delete     | No                | Handles the user request to delete a specific listing                                                 | `res.redirect('/you-choose')` |
 
 *NOTE: The `edit` route may optionally read data for a specific listing to pre-fill data in the form that will ultimately be rendered to the user.
+
+## Calculator API Endpoints
+
+| HTTP Method (Verb) | Path/Endpoint/URI | CRUD Operation | Route Name | Has Data Payload? | Purpose                                                                 | Render/Redirect Action          |
+| ------------------ | ----------------- | -------------- | ---------- | ----------------- | ----------------------------------------------------------------------- | ------------------------------- |
+| GET                | `/calculator`     | Read           | index      | No                | Returns the current total of the calculator                             | `res.send(currentTotal)`        |
+| POST               | `/calculator`     | Update         | update     | Yes               | Accepts a number and an operation to update the total                   | `res.redirect('/calculator')`   |
+| DELETE             | `/calculator`     | Delete         | delete     | No                | Resets the total of the calculator to 0                                 | `res.redirect('/calculator')`   |
