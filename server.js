@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 
+// total variable to store the result of the calculations
 let total = 0;
+
+// route to get the total
 app.get('/calculator', (req, res) => {
     res.status(200).json({ total });
 });
@@ -30,6 +33,7 @@ app.post('/calculator', (req, res) => {
     res.status(200).json({ total })
 });
 
+// start the server
 app.listen(4000, () => {
     console.log('Server listening on port 4000');
 });
