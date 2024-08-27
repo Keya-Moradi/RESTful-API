@@ -1,4 +1,4 @@
-# RESTful-API
+# RESTful-API (example)
 
 Concepts of RESTful routing and exposing API endpoints using Postman
 
