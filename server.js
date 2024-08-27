@@ -33,8 +33,15 @@ app.post('/calculator', (req, res) => {
     res.status(200).json({ total })
 });
 
+app.delete('/calculator', (req, res) => {
+    // reset the total to 0
+    total = 0;
+    // send back the updated total
+    res.status(204).json({ total });
+})
+
 // start the server
 app.listen(4000, () => {
     console.log('Server listening on port 4000');
-});
+})
 
